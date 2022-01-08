@@ -1,22 +1,43 @@
-package com.buffer;
-
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+package com.exceptions;
 
 public class Ex1 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FileInputStream fi = new FileInputStream("C://Users//pandiyan//Desktop//ioexeptions//Java.text5");
-		BufferedInputStream bis = new BufferedInputStream(fi);
-		int i =0;
-		while((i=bis.read())!=-1)
+System.out.println("Hello World..!");
+		
+		//input variables
+		int a = 50, b = 0;
+		
+		/**
+		 * Exception Handling: The process of maintaining normal flow of
+		 * ==================  java program execution.
+		 */
+		
+		/*
+		 * Exception Handling Constraints: try, catch, finally, throw and
+		 * ==============================  throws
+		 */
+		
+		try
 		{
-			System.out.print((char)i);
+			int c = a/b;//infinite
+			System.out.println(c);
 		}
-bis.close();
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}	
+		
+		System.out.println("---------------------");
+		
+		System.out.println(a);
+		
+		System.out.println("---------------------");
+		
+		System.out.println(b);
+
+
 	}
 
 }
